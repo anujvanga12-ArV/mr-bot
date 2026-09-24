@@ -1,0 +1,60 @@
+{
+  "name": "mr-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MR.BOT — a cybersecurity education platform for beginners through advanced learners.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:push": "drizzle-kit push",
+    "db:studio": "drizzle-kit studio",
+    "content:sync": "tsx --env-file=.env content/sync.ts"
+  },
+  "dependencies": {
+    "next": "^16.2.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "@supabase/ssr": "^0.12.0",
+    "@supabase/supabase-js": "^2.85.0",
+    "@anthropic-ai/sdk": "^0.105.0",
+    "drizzle-orm": "^0.45.2",
+    "postgres": "^3.4.5",
+    "zod": "^4.0.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.0.0",
+    "lucide-react": "^0.475.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "typescript": "^6.0.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.0",
+    "@tailwindcss/postcss": "^4.1.0",
+    "tw-animate-css": "^1.2.0",
+    "drizzle-kit": "^0.31.4",
+    "eslint": "^9.15.0",
+    "eslint-config-next": "^16.2.0",
+    "prettier": "^3.4.0",
+    "prettier-plugin-tailwindcss": "^0.6.9",
+    "vitest": "^3.0.0",
+    "tsx": "^4.19.0",
+    "@testing-library/react": "^16.1.0",
+    "@testing-library/jest-dom": "^6.6.0",
+    "jsdom": "^25.0.1"
+  },
+  "engines": {
+    "node": ">=20.9.0"
+  }
+}
