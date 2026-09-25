@@ -22,12 +22,14 @@ export function UrlAnalyzer() {
           onChange={(event) => setInput(event.target.value)}
           placeholder="Paste a URL, e.g. example.com/login"
           autoComplete="off"
-          className="h-10 flex-1 rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="border-input bg-background focus-visible:ring-ring h-10 flex-1 rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
         />
         <Button type="submit">Check</Button>
       </form>
 
-      {result && !result.isValid ? <p className="text-sm text-destructive">{result.error}</p> : null}
+      {result && !result.isValid ? (
+        <p className="text-destructive text-sm">{result.error}</p>
+      ) : null}
 
       {result && result.isValid ? (
         <div className="flex flex-col gap-4">

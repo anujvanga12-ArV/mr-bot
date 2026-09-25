@@ -4,7 +4,8 @@ export const whatIsCybersecurity: Lesson = {
   slug: "what-is-cybersecurity",
   title: "What Is Cybersecurity?",
   estimatedMinutes: 8,
-  objective: "Explain what cybersecurity means and why it applies to your own devices and accounts.",
+  objective:
+    "Explain what cybersecurity means and why it applies to your own devices and accounts.",
   blocks: [
     {
       type: "text",
@@ -51,7 +52,10 @@ export const whatIsCybersecurity: Lesson = {
       options: [
         { id: "a", text: "Only large companies and governments" },
         { id: "b", text: "Only computers, not phones or tablets" },
-        { id: "c", text: "Any device, account, or information that could be accessed without permission" },
+        {
+          id: "c",
+          text: "Any device, account, or information that could be accessed without permission",
+        },
         { id: "d", text: "Only information that's already been stolen once" },
       ],
       correctOptionId: "c",

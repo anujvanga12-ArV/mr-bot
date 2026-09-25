@@ -9,7 +9,11 @@ describe("analyzeFileMetadata", () => {
   });
 
   it("flags a plain executable without claiming it's a double extension", () => {
-    const result = analyzeFileMetadata({ name: "setup.exe", size: 2048, type: "application/x-msdownload" });
+    const result = analyzeFileMetadata({
+      name: "setup.exe",
+      size: 2048,
+      type: "application/x-msdownload",
+    });
     expect(result.hasDoubleExtensionRisk).toBe(false);
     expect(result.indicators.map((i) => i.id)).toContain("executable-extension");
   });

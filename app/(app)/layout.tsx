@@ -19,7 +19,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
   return (
     <div className="min-h-svh">
-      <header className="border-b border-border">
+      <header className="border-border border-b">
         <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-4">
           <Link href="/dashboard" className="font-semibold tracking-tight">
             MR.BOT

@@ -9,7 +9,7 @@ export const whatProfessionalsDo: Lesson = {
   blocks: [
     {
       type: "text",
-      body: "Cybersecurity work generally splits into two mindsets that need each other. Defensive cybersecurity (often called \"blue team\") is about building and monitoring protections — setting up systems correctly, watching for suspicious activity, and responding when something goes wrong. Offensive cybersecurity (\"red team\") is about thinking like an attacker on purpose, with permission, to find weaknesses before someone with bad intentions does.",
+      body: 'Cybersecurity work generally splits into two mindsets that need each other. Defensive cybersecurity (often called "blue team") is about building and monitoring protections — setting up systems correctly, watching for suspicious activity, and responding when something goes wrong. Offensive cybersecurity ("red team") is about thinking like an attacker on purpose, with permission, to find weaknesses before someone with bad intentions does.',
     },
     {
       type: "vocabulary",
@@ -51,8 +51,14 @@ export const whatProfessionalsDo: Lesson = {
       prompt: "What's the main difference between offensive and defensive cybersecurity?",
       options: [
         { id: "a", text: "Offensive roles are illegal and defensive roles are legal" },
-        { id: "b", text: "Offensive roles find weaknesses with permission; defensive roles build and monitor protections" },
-        { id: "c", text: "There's no real difference — they're the same job with different titles" },
+        {
+          id: "b",
+          text: "Offensive roles find weaknesses with permission; defensive roles build and monitor protections",
+        },
+        {
+          id: "c",
+          text: "There's no real difference — they're the same job with different titles",
+        },
         { id: "d", text: "Offensive roles only exist in movies" },
       ],
       correctOptionId: "b",
@@ -68,31 +74,42 @@ export const whatProfessionalsDo: Lesson = {
         prompt: "Cybersecurity is best described as protecting...",
         options: [
           { id: "a", text: "Only banks and governments" },
-          { id: "b", text: "Any device, account, or information that could be accessed without permission" },
+          {
+            id: "b",
+            text: "Any device, account, or information that could be accessed without permission",
+          },
           { id: "c", text: "Only information after it's already been stolen" },
         ],
         correctOptionId: "b",
-        explanation: "It applies anywhere information exists, at any scale — from your phone to a hospital's records.",
+        explanation:
+          "It applies anywhere information exists, at any scale — from your phone to a hospital's records.",
       },
       {
         type: "question",
-        prompt: "Your school upgrades its network security. Does that mean you no longer need a strong password?",
+        prompt:
+          "Your school upgrades its network security. Does that mean you no longer need a strong password?",
         options: [
           { id: "a", text: "Yes — the school's security covers everyone" },
-          { id: "b", text: "No — personal and organizational security are both needed, and neither replaces the other" },
+          {
+            id: "b",
+            text: "No — personal and organizational security are both needed, and neither replaces the other",
+          },
         ],
         correctOptionId: "b",
-        explanation: "Strong organizational security reduces risk, but a weak personal password is still an open door on your side of things.",
+        explanation:
+          "Strong organizational security reduces risk, but a weak personal password is still an open door on your side of things.",
       },
       {
         type: "question",
-        prompt: "A security email asks you to click a link to 'verify your account immediately.' What's the safer habit?",
+        prompt:
+          "A security email asks you to click a link to 'verify your account immediately.' What's the safer habit?",
         options: [
           { id: "a", text: "Click the link since the email looks official" },
           { id: "b", text: "Go to the site directly yourself, without using the link" },
         ],
         correctOptionId: "b",
-        explanation: "Typing the address yourself (or using a saved bookmark) means you can't be routed to a fake page — even if the original email turns out to be genuine.",
+        explanation:
+          "Typing the address yourself (or using a saved bookmark) means you can't be routed to a fake page — even if the original email turns out to be genuine.",
       },
       {
         type: "question",
@@ -103,7 +120,8 @@ export const whatProfessionalsDo: Lesson = {
           { id: "c", text: "Not causing any actual damage" },
         ],
         correctOptionId: "b",
-        explanation: "Intent and outcome don't change the legal line — authorization does. The same technique is a crime without it, regardless of motive.",
+        explanation:
+          "Intent and outcome don't change the legal line — authorization does. The same technique is a crime without it, regardless of motive.",
       },
     ],
   },

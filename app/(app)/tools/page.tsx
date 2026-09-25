@@ -34,16 +34,16 @@ export default function ToolsPage() {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-2xl font-semibold">Tools</h1>
-        <p className="mt-1 text-muted-foreground">
+        <p className="text-muted-foreground mt-1">
           Small, honest tools — each explains what it can and can&apos;t actually tell you.
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-2">
         {TOOLS.map((tool) => (
           <Link key={tool.href} href={tool.href}>
-            <Card className="h-full transition-colors hover:bg-secondary/50">
+            <Card className="hover:bg-secondary/50 h-full transition-colors">
               <CardHeader>
-                <tool.icon className="size-5 text-accent-foreground" />
+                <tool.icon className="text-accent-foreground size-5" />
                 <CardTitle className="mt-2">{tool.title}</CardTitle>
                 <CardDescription>{tool.description}</CardDescription>
               </CardHeader>

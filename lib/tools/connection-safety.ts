@@ -41,7 +41,10 @@ export interface NetworkGuidance {
   severity: "info" | "caution" | "warning";
 }
 
-export function getNetworkGuidance(trust: NetworkTrust, requiresPassword: boolean): NetworkGuidance {
+export function getNetworkGuidance(
+  trust: NetworkTrust,
+  requiresPassword: boolean,
+): NetworkGuidance {
   if (trust === "own-network") {
     return requiresPassword
       ? {
@@ -52,7 +55,8 @@ export function getNetworkGuidance(trust: NetworkTrust, requiresPassword: boolea
         }
       : {
           headline: "An open home network is worth locking down",
-          detail: "Set a Wi-Fi password on your router so only people you allow can join the network.",
+          detail:
+            "Set a Wi-Fi password on your router so only people you allow can join the network.",
           severity: "warning",
         };
   }

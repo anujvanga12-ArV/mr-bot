@@ -99,7 +99,8 @@ export async function evaluateProgressAwards(
   const completedModuleSlugs = new Set(
     detail
       .filter(
-        (mod) => mod.lessons.length > 0 && mod.lessons.every((lesson) => lesson.status === "completed"),
+        (mod) =>
+          mod.lessons.length > 0 && mod.lessons.every((lesson) => lesson.status === "completed"),
       )
       .map((mod) => mod.slug),
   );
@@ -107,7 +108,8 @@ export async function evaluateProgressAwards(
     mod.lessons.some((lesson) => lesson.status === "completed"),
   );
   const isCourseComplete =
-    detail.length > 0 && detail.every((mod) => mod.lessons.every((lesson) => lesson.status === "completed"));
+    detail.length > 0 &&
+    detail.every((mod) => mod.lessons.every((lesson) => lesson.status === "completed"));
 
   const newSkills: SkillDefinition[] = [];
   for (const skill of BEGINNER_SKILLS) {

@@ -9,16 +9,16 @@ export default function LearnPage() {
       <div className="grid gap-4 sm:grid-cols-2">
         {COURSES.map((course) => (
           <Link key={course.slug} href={`/learn/${course.slug}`}>
-            <Card className="h-full transition-colors hover:bg-secondary/50">
+            <Card className="hover:bg-secondary/50 h-full transition-colors">
               <CardHeader>
-                <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                <p className="text-muted-foreground text-xs font-medium tracking-wide uppercase">
                   {course.level}
                 </p>
                 <CardTitle>{course.title}</CardTitle>
                 <CardDescription>{course.description}</CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground">
+                <p className="text-muted-foreground text-sm">
                   {course.modules.length} module{course.modules.length === 1 ? "" : "s"}
                 </p>
               </CardContent>

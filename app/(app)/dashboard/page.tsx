@@ -73,9 +73,9 @@ export default async function DashboardPage() {
                 </Link>
               </div>
             ) : nextLesson ? (
-              <p className="text-sm text-muted-foreground">{nextLesson.title}</p>
+              <p className="text-muted-foreground text-sm">{nextLesson.title}</p>
             ) : (
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 You&apos;ve completed every published lesson in this course.
               </p>
             )}
@@ -89,18 +89,18 @@ export default async function DashboardPage() {
           <CardContent>
             {completion && completion.total > 0 ? (
               <>
-                <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+                <div className="bg-secondary h-2 w-full overflow-hidden rounded-full">
                   <div
-                    className="h-full rounded-full bg-primary transition-[width]"
+                    className="bg-primary h-full rounded-full transition-[width]"
                     style={{ width: `${completion.percent}%` }}
                   />
                 </div>
-                <p className="mt-2 text-sm text-muted-foreground">
+                <p className="text-muted-foreground mt-2 text-sm">
                   {completion.completed} of {completion.total} lessons complete
                 </p>
               </>
             ) : (
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 This course doesn&apos;t have any lessons published yet.
               </p>
             )}
@@ -117,14 +117,14 @@ export default async function DashboardPage() {
                 {earnedSkills.map(({ skill }) => (
                   <span
                     key={skill.id}
-                    className="rounded-full bg-accent/15 px-3 py-1 text-xs font-medium text-accent-foreground"
+                    className="bg-accent/15 text-accent-foreground rounded-full px-3 py-1 text-xs font-medium"
                   >
                     {skill.name}
                   </span>
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Complete a module to unlock your first skill.
               </p>
             )}
@@ -146,7 +146,7 @@ export default async function DashboardPage() {
                 ))}
               </ul>
             ) : (
-              <p className="text-sm text-muted-foreground">
+              <p className="text-muted-foreground text-sm">
                 Complete your first lesson to earn an achievement.
               </p>
             )}

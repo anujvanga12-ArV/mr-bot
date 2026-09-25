@@ -26,7 +26,7 @@ export function SignUpForm({ next }: { next: string }) {
           required
           minLength={2}
           maxLength={60}
-          className="h-10 rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="border-input bg-background focus-visible:ring-ring h-10 rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
         />
       </div>
 
@@ -40,7 +40,7 @@ export function SignUpForm({ next }: { next: string }) {
           type="email"
           autoComplete="email"
           required
-          className="h-10 rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="border-input bg-background focus-visible:ring-ring h-10 rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
         />
       </div>
 
@@ -55,22 +55,22 @@ export function SignUpForm({ next }: { next: string }) {
           autoComplete="new-password"
           required
           minLength={8}
-          className="h-10 rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          className="border-input bg-background focus-visible:ring-ring h-10 rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
         />
-        <p className="text-xs text-muted-foreground">At least 8 characters.</p>
+        <p className="text-muted-foreground text-xs">At least 8 characters.</p>
       </div>
 
       {state.error ? (
-        <p role="alert" className="text-sm text-destructive">
+        <p role="alert" className="text-destructive text-sm">
           {state.error}
         </p>
       ) : null}
 
       <SubmitButton className="mt-2 w-full">Create account</SubmitButton>
 
-      <p className="text-center text-sm text-muted-foreground">
+      <p className="text-muted-foreground text-center text-sm">
         Already have an account?{" "}
-        <Link href="/login" className="font-medium text-foreground underline underline-offset-4">
+        <Link href="/login" className="text-foreground font-medium underline underline-offset-4">
           Sign in
         </Link>
       </p>

@@ -17,7 +17,7 @@ export const workingWithStrings: Lesson = {
     },
     {
       type: "text",
-      body: "That second line is a deliberate, realistic trap: `.startswith(\"https\")` checks for an exact, case-sensitive match, and the URL starts with \"HTTPS\" in capitals. This is exactly the kind of small bug that causes a real security check to silently do nothing — which is why comparing after `.lower()` is a common defensive habit, not just a style preference.",
+      body: 'That second line is a deliberate, realistic trap: `.startswith("https")` checks for an exact, case-sensitive match, and the URL starts with "HTTPS" in capitals. This is exactly the kind of small bug that causes a real security check to silently do nothing — which is why comparing after `.lower()` is a common defensive habit, not just a style preference.',
     },
     {
       type: "code",
@@ -26,14 +26,16 @@ export const workingWithStrings: Lesson = {
     },
     {
       type: "question",
-      prompt: 'What will this print?\n\nemail = "  User@Example.com  "\nprint(email.strip().lower())',
+      prompt:
+        'What will this print?\n\nemail = "  User@Example.com  "\nprint(email.strip().lower())',
       options: [
         { id: "a", text: '"  User@Example.com  "' },
         { id: "b", text: '"user@example.com"' },
         { id: "c", text: "An error, because you can't chain two methods together" },
       ],
       correctOptionId: "b",
-      explanation: '.strip() removes leading/trailing whitespace, and .lower() converts to lowercase. Chaining them runs .strip() first, then .lower() on the result — a very common pattern for cleaning up user input before comparing or storing it.',
+      explanation:
+        ".strip() removes leading/trailing whitespace, and .lower() converts to lowercase. Chaining them runs .strip() first, then .lower() on the result — a very common pattern for cleaning up user input before comparing or storing it.",
       hint: "Methods can be chained left to right — each one runs on the result of the one before it.",
     },
   ],
@@ -42,7 +44,7 @@ export const workingWithStrings: Lesson = {
     questions: [
       {
         type: "question",
-        prompt: 'What does this print?\n\nattempts = 4\nprint(attempts >= 3)',
+        prompt: "What does this print?\n\nattempts = 4\nprint(attempts >= 3)",
         options: [
           { id: "a", text: "4" },
           { id: "b", text: "True" },
@@ -53,7 +55,7 @@ export const workingWithStrings: Lesson = {
       },
       {
         type: "question",
-        prompt: "Which data type would you use to represent \"is this account currently locked?\"",
+        prompt: 'Which data type would you use to represent "is this account currently locked?"',
         options: [
           { id: "a", text: "A string" },
           { id: "b", text: "A boolean" },
@@ -64,13 +66,18 @@ export const workingWithStrings: Lesson = {
       },
       {
         type: "question",
-        prompt: 'Why might url.startswith("https") unexpectedly return False even for a legitimate HTTPS link?',
+        prompt:
+          'Why might url.startswith("https") unexpectedly return False even for a legitimate HTTPS link?',
         options: [
-          { id: "a", text: "startswith() is case-sensitive, so \"HTTPS\" in capitals won't match \"https\"" },
+          {
+            id: "a",
+            text: 'startswith() is case-sensitive, so "HTTPS" in capitals won\'t match "https"',
+          },
           { id: "b", text: "startswith() only works on numbers" },
         ],
         correctOptionId: "a",
-        explanation: "Without normalizing case first (e.g. with .lower()), an exact-case check can silently fail on perfectly valid input.",
+        explanation:
+          "Without normalizing case first (e.g. with .lower()), an exact-case check can silently fail on perfectly valid input.",
       },
       {
         type: "question",
@@ -80,7 +87,8 @@ export const workingWithStrings: Lesson = {
           { id: "b", text: '"  user@example.com  "' },
         ],
         correctOptionId: "a",
-        explanation: ".strip() removes the surrounding whitespace, then .lower() lowercases what's left.",
+        explanation:
+          ".strip() removes the surrounding whitespace, then .lower() lowercases what's left.",
       },
     ],
   },

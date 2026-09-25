@@ -4,7 +4,8 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
   slug: "https-firewalls-and-public-wifi",
   title: "HTTPS, Firewalls, and Public Wi-Fi",
   estimatedMinutes: 9,
-  objective: "Explain what HTTPS and a firewall actually protect, and apply that to public Wi-Fi safety.",
+  objective:
+    "Explain what HTTPS and a firewall actually protect, and apply that to public Wi-Fi safety.",
   blocks: [
     {
       type: "text",
@@ -37,7 +38,7 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
     {
       type: "scenario",
       setup:
-        "You're at a coffee shop and need to log into an account. The site's address bar shows no padlock icon, and the address starts with \"http://\" instead of \"https://\". What should you do?",
+        'You\'re at a coffee shop and need to log into an account. The site\'s address bar shows no padlock icon, and the address starts with "http://" instead of "https://". What should you do?',
       choices: [
         {
           id: "log-in-anyway",
@@ -60,7 +61,10 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
       prompt: "Why does HTTPS matter more on public Wi-Fi specifically?",
       options: [
         { id: "a", text: "Because public Wi-Fi doesn't work without it" },
-        { id: "b", text: "Because other devices may share that network, and HTTPS keeps your data unreadable to them even so" },
+        {
+          id: "b",
+          text: "Because other devices may share that network, and HTTPS keeps your data unreadable to them even so",
+        },
       ],
       correctOptionId: "b",
       explanation:
@@ -78,7 +82,8 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
           { id: "b", text: "Encrypts your internet traffic" },
         ],
         correctOptionId: "a",
-        explanation: "It's an addressing system for routing data to the right device, not an encryption mechanism.",
+        explanation:
+          "It's an addressing system for routing data to the right device, not an encryption mechanism.",
       },
       {
         type: "question",
@@ -88,17 +93,22 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
           { id: "b", text: "The router's brand name" },
         ],
         correctOptionId: "a",
-        explanation: "Default admin passwords are often shared across every unit of a router model and easy to look up.",
+        explanation:
+          "Default admin passwords are often shared across every unit of a router model and easy to look up.",
       },
       {
         type: "question",
         prompt: "What does the padlock icon in a browser's address bar actually confirm?",
         options: [
-          { id: "a", text: "That the connection is encrypted (HTTPS) and the certificate is valid" },
+          {
+            id: "a",
+            text: "That the connection is encrypted (HTTPS) and the certificate is valid",
+          },
           { id: "b", text: "That the website's content is definitely trustworthy" },
         ],
         correctOptionId: "a",
-        explanation: "It's a statement about the connection's security, not a judgment about whether the site itself is legitimate or safe.",
+        explanation:
+          "It's a statement about the connection's security, not a judgment about whether the site itself is legitimate or safe.",
       },
       {
         type: "question",
@@ -108,7 +118,8 @@ export const httpsFirewallsAndPublicWifi: Lesson = {
           { id: "b", text: "Translate website names into IP addresses" },
         ],
         correctOptionId: "a",
-        explanation: "That's DNS's job — a firewall is specifically about filtering traffic based on rules.",
+        explanation:
+          "That's DNS's job — a firewall is specifically about filtering traffic based on rules.",
       },
     ],
   },

@@ -4,7 +4,8 @@ export const variablesAndDataTypes: Lesson = {
   slug: "variables-and-data-types",
   title: "Variables and Data Types",
   estimatedMinutes: 10,
-  objective: "Write and read simple Python variables, and recognize the basic data types you'll use constantly in security scripting.",
+  objective:
+    "Write and read simple Python variables, and recognize the basic data types you'll use constantly in security scripting.",
   blocks: [
     {
       type: "text",
@@ -17,11 +18,12 @@ export const variablesAndDataTypes: Lesson = {
     },
     {
       type: "text",
-      body: "Notice the three data types already in play: a string (text, in quotes), an integer (a whole number, no quotes), and a boolean (True or False — exactly what you'd reach for to represent something like \"is this account locked?\").",
+      body: 'Notice the three data types already in play: a string (text, in quotes), an integer (a whole number, no quotes), and a boolean (True or False — exactly what you\'d reach for to represent something like "is this account locked?").',
     },
     {
       type: "question",
-      prompt: "What will the following code print?\n\nlogin_attempts = 5\nmax_attempts = 3\nprint(login_attempts > max_attempts)",
+      prompt:
+        "What will the following code print?\n\nlogin_attempts = 5\nmax_attempts = 3\nprint(login_attempts > max_attempts)",
       options: [
         { id: "a", text: "5" },
         { id: "b", text: "True" },
@@ -29,7 +31,8 @@ export const variablesAndDataTypes: Lesson = {
         { id: "d", text: "An error" },
       ],
       correctOptionId: "b",
-      explanation: "5 > 3 is a comparison that evaluates to a boolean. Since 5 is indeed greater than 3, it prints True.",
+      explanation:
+        "5 > 3 is a comparison that evaluates to a boolean. Since 5 is indeed greater than 3, it prints True.",
       hint: "The > symbol compares two numbers and produces a boolean result, not a number.",
     },
     {

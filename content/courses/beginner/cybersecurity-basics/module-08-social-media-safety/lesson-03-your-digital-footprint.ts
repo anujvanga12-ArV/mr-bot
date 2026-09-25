@@ -4,7 +4,8 @@ export const yourDigitalFootprint: Lesson = {
   slug: "your-digital-footprint",
   title: "Your Digital Footprint",
   estimatedMinutes: 8,
-  objective: "Understand what a digital footprint is and why it tends to last longer than expected.",
+  objective:
+    "Understand what a digital footprint is and why it tends to last longer than expected.",
   blocks: [
     {
       type: "text",
@@ -49,7 +50,10 @@ export const yourDigitalFootprint: Lesson = {
       type: "question",
       prompt: "Why isn't deleting a post the same as fully removing it from existence?",
       options: [
-        { id: "a", text: "Because copies may already exist elsewhere — screenshots, shares, caches — that deletion doesn't reach" },
+        {
+          id: "a",
+          text: "Because copies may already exist elsewhere — screenshots, shares, caches — that deletion doesn't reach",
+        },
         { id: "b", text: "Deleting a post does completely erase every copy of it everywhere" },
       ],
       correctOptionId: "a",
@@ -64,21 +68,30 @@ export const yourDigitalFootprint: Lesson = {
         type: "question",
         prompt: "Why does geotagging deserve specific caution beyond general oversharing?",
         options: [
-          { id: "a", text: "Precise location, especially with timing, is a specific and concrete disclosure" },
+          {
+            id: "a",
+            text: "Precise location, especially with timing, is a specific and concrete disclosure",
+          },
           { id: "b", text: "It has no real privacy implications" },
         ],
         correctOptionId: "a",
-        explanation: "Exact location data combined with timing (like being away from home) is more specific and actionable than a vague mention.",
+        explanation:
+          "Exact location data combined with timing (like being away from home) is more specific and actionable than a vague mention.",
       },
       {
         type: "question",
-        prompt: "Someone unfamiliar pushes to quickly move your conversation to a different app. What should that suggest?",
+        prompt:
+          "Someone unfamiliar pushes to quickly move your conversation to a different app. What should that suggest?",
         options: [
-          { id: "a", text: "It's a common move-away-from-safety-tools pattern worth being cautious about" },
+          {
+            id: "a",
+            text: "It's a common move-away-from-safety-tools pattern worth being cautious about",
+          },
           { id: "b", text: "It's a normal, unremarkable preference" },
         ],
         correctOptionId: "a",
-        explanation: "This pressure shows up across multiple kinds of scams and is worth treating as a signal, not a coincidence.",
+        explanation:
+          "This pressure shows up across multiple kinds of scams and is worth treating as a signal, not a coincidence.",
       },
       {
         type: "question",
@@ -88,17 +101,22 @@ export const yourDigitalFootprint: Lesson = {
           { id: "b", text: "Verify with your friend through a different channel first" },
         ],
         correctOptionId: "b",
-        explanation: "A familiar account doesn't guarantee the person controlling it right now is actually your friend.",
+        explanation:
+          "A familiar account doesn't guarantee the person controlling it right now is actually your friend.",
       },
       {
         type: "question",
         prompt: "Why doesn't deleting a post fully undo having shared it?",
         options: [
-          { id: "a", text: "Copies (screenshots, shares) may already exist beyond the platform's control" },
+          {
+            id: "a",
+            text: "Copies (screenshots, shares) may already exist beyond the platform's control",
+          },
           { id: "b", text: "Deletion is always fully complete and permanent everywhere" },
         ],
         correctOptionId: "a",
-        explanation: "\"Delete\" removes it going forward — it can't reach copies that already left your control.",
+        explanation:
+          '"Delete" removes it going forward — it can\'t reach copies that already left your control.',
       },
     ],
   },

@@ -4,7 +4,8 @@ export const sharedComputersAndPublicWifi: Lesson = {
   slug: "shared-computers-and-public-wifi",
   title: "Shared Computers and Public Wi-Fi",
   estimatedMinutes: 9,
-  objective: "Apply safe habits when using a computer you don't own or a network you don't control.",
+  objective:
+    "Apply safe habits when using a computer you don't own or a network you don't control.",
   blocks: [
     {
       type: "text",
@@ -20,7 +21,7 @@ export const sharedComputersAndPublicWifi: Lesson = {
           text: "No real risk — the library computer resets itself eventually.",
           isSafe: false,
           feedback:
-            "\"Eventually\" isn't the same as \"before the next person sits down.\" Many shared computers stay logged in until someone explicitly signs out or the session times out — which could be minutes away, not immediately.",
+            '"Eventually" isn\'t the same as "before the next person sits down." Many shared computers stay logged in until someone explicitly signs out or the session times out — which could be minutes away, not immediately.',
         },
         {
           id: "sign-out",
@@ -50,7 +51,10 @@ export const sharedComputersAndPublicWifi: Lesson = {
       prompt: "On a computer you don't own, the single most important habit is to...",
       options: [
         { id: "a", text: "Use a shorter password so it's faster to type" },
-        { id: "b", text: "Sign out of every account before you leave, rather than just closing the tab" },
+        {
+          id: "b",
+          text: "Sign out of every account before you leave, rather than just closing the tab",
+        },
         { id: "c", text: "Avoid using it at all, ever" },
       ],
       correctOptionId: "b",
@@ -63,23 +67,33 @@ export const sharedComputersAndPublicWifi: Lesson = {
     questions: [
       {
         type: "question",
-        prompt: "Why is it more useful to think about combinations of personal details rather than one detail at a time?",
+        prompt:
+          "Why is it more useful to think about combinations of personal details rather than one detail at a time?",
         options: [
           { id: "a", text: "Because a single detail is never risky" },
-          { id: "b", text: "Because several 'harmless' details together can identify or locate someone" },
+          {
+            id: "b",
+            text: "Because several 'harmless' details together can identify or locate someone",
+          },
         ],
         correctOptionId: "b",
-        explanation: "A school name, a schedule, and a gamertag each seem minor alone but combine into something identifying.",
+        explanation:
+          "A school name, a schedule, and a gamertag each seem minor alone but combine into something identifying.",
       },
       {
         type: "question",
-        prompt: "A website says you must download a viewer to continue. What's the safest response?",
+        prompt:
+          "A website says you must download a viewer to continue. What's the safest response?",
         options: [
           { id: "a", text: "Download it since the site says it's required" },
-          { id: "b", text: "Close the pop-up and, if you truly need that software, get it from its own official site later" },
+          {
+            id: "b",
+            text: "Close the pop-up and, if you truly need that software, get it from its own official site later",
+          },
         ],
         correctOptionId: "b",
-        explanation: "Legitimate content rarely requires a surprise mid-visit install — the urgency is the manipulation, not a real requirement.",
+        explanation:
+          "Legitimate content rarely requires a surprise mid-visit install — the urgency is the manipulation, not a real requirement.",
       },
       {
         type: "question",
@@ -89,17 +103,22 @@ export const sharedComputersAndPublicWifi: Lesson = {
           { id: "b", text: "Sign out of every account you used" },
         ],
         correctOptionId: "b",
-        explanation: "Closing a tab often leaves the session active for the next person; signing out actually ends it.",
+        explanation:
+          "Closing a tab often leaves the session active for the next person; signing out actually ends it.",
       },
       {
         type: "question",
         prompt: "What's the main extra risk on public Wi-Fi compared to a private home network?",
         options: [
-          { id: "a", text: "Other people on the same network may be able to observe unencrypted traffic" },
+          {
+            id: "a",
+            text: "Other people on the same network may be able to observe unencrypted traffic",
+          },
           { id: "b", text: "Public Wi-Fi always deletes your files" },
         ],
         correctOptionId: "a",
-        explanation: "It's about who else shares the network, not about the connection destroying data — HTTPS (Module 7) is what protects most of your actual browsing content.",
+        explanation:
+          "It's about who else shares the network, not about the connection destroying data — HTTPS (Module 7) is what protects most of your actual browsing content.",
       },
     ],
   },

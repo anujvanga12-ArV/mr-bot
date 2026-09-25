@@ -33,7 +33,7 @@ export function IndicatorList({ indicators }: { indicators: DisplayIndicator[] }
             <Icon className="mt-0.5 size-4 shrink-0" />
             <div>
               <p className="text-sm font-medium">{indicator.label}</p>
-              <p className="text-sm text-muted-foreground">{indicator.detail}</p>
+              <p className="text-muted-foreground text-sm">{indicator.detail}</p>
             </div>
           </div>
         );

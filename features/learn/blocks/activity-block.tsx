@@ -6,8 +6,8 @@ import type { ActivityBlock } from "@/content/types";
 // interactivity if content ever references one before the UI exists.
 export function ActivityBlockView({ block }: { block: ActivityBlock }) {
   return (
-    <div className="rounded-md border border-dashed border-border p-4 text-sm text-muted-foreground">
-      <p className="font-medium text-foreground">{block.prompt}</p>
+    <div className="border-border text-muted-foreground rounded-md border border-dashed p-4 text-sm">
+      <p className="text-foreground font-medium">{block.prompt}</p>
       <p className="mt-1">
         This {block.kind.replace("-", " ")} activity isn&apos;t built yet — tracked for a future
         pass.

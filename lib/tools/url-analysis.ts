@@ -49,7 +49,8 @@ export function analyzeUrl(rawInput: string): UrlAnalysisResult {
   const isIpAddress = IPV4_PATTERN.test(hostname);
   const hostnameParts = hostname.split(".");
   const subdomains = hostnameParts.length > 2 ? hostnameParts.slice(0, -2) : [];
-  const domainLabel = hostnameParts.length >= 2 ? hostnameParts[hostnameParts.length - 2] : hostname;
+  const domainLabel =
+    hostnameParts.length >= 2 ? hostnameParts[hostnameParts.length - 2] : hostname;
 
   const indicators: UrlIndicator[] = [];
 

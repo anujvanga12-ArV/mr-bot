@@ -4,18 +4,19 @@ export const safeBrowsingAndDownloads: Lesson = {
   slug: "safe-browsing-and-downloads",
   title: "Safe Browsing and Downloads",
   estimatedMinutes: 8,
-  objective: "Recognize suspicious websites and downloads, and know what to do when a site asks you to install something.",
+  objective:
+    "Recognize suspicious websites and downloads, and know what to do when a site asks you to install something.",
   blocks: [
     {
       type: "text",
-      body: "Most websites you visit don't need you to install anything. When one suddenly does — especially to \"continue,\" \"unlock,\" or \"view\" something you were already trying to do — that's worth pausing on. Legitimate sites you already trust (your school portal, a streaming service, a search engine) essentially never require a surprise download partway through.",
+      body: 'Most websites you visit don\'t need you to install anything. When one suddenly does — especially to "continue," "unlock," or "view" something you were already trying to do — that\'s worth pausing on. Legitimate sites you already trust (your school portal, a streaming service, a search engine) essentially never require a surprise download partway through.',
     },
     {
       type: "vocabulary",
       term: {
         term: "Suspicious download",
         simpleDefinition:
-          "A file a website wants you to install that you didn't go looking for, especially one that appears as a pop-up or a \"required\" step.",
+          'A file a website wants you to install that you didn\'t go looking for, especially one that appears as a pop-up or a "required" step.',
         technicalDefinition:
           "Files distributed via drive-by prompts, deceptive UI (fake 'download' buttons styled to look like site content), or bundled installers. These are common delivery methods for adware and, less often, more serious malware — the file's origin and the pressure to install it matter more than what it claims to be.",
       },
@@ -54,15 +55,19 @@ export const safeBrowsingAndDownloads: Lesson = {
     },
     {
       type: "question",
-      prompt: "A site claims you must install a \"required\" viewer to see its content. What's true here?",
+      prompt:
+        'A site claims you must install a "required" viewer to see its content. What\'s true here?',
       options: [
-        { id: "a", text: "Legitimate content almost never requires a surprise mid-visit download, so this is a red flag" },
+        {
+          id: "a",
+          text: "Legitimate content almost never requires a surprise mid-visit download, so this is a red flag",
+        },
         { id: "b", text: "It's definitely safe as long as the pop-up looks professional" },
         { id: "c", text: "It's fine to install if you're only doing it once" },
       ],
       correctOptionId: "a",
       explanation:
-        "The claim of being \"required\" is doing the persuading, not the software itself. Real tools you might actually need are worth getting from their own official site, on your own terms — not from a prompt embedded in someone else's page.",
+        'The claim of being "required" is doing the persuading, not the software itself. Real tools you might actually need are worth getting from their own official site, on your own terms — not from a prompt embedded in someone else\'s page.',
     },
   ],
 };

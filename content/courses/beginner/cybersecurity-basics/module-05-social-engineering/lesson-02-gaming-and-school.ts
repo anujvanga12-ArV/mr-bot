@@ -34,7 +34,7 @@ export const socialEngineeringInGamingAndSchool: Lesson = {
     {
       type: "scenario",
       setup:
-        "An email appears to be from your school's IT help desk: \"We noticed unusual login attempts on your account. Reply with your student ID and password to lock it down before further attempts succeed.\"",
+        'An email appears to be from your school\'s IT help desk: "We noticed unusual login attempts on your account. Reply with your student ID and password to lock it down before further attempts succeed."',
       choices: [
         {
           id: "reply-with-info",
@@ -54,14 +54,18 @@ export const socialEngineeringInGamingAndSchool: Lesson = {
     },
     {
       type: "text",
-      body: "Notice the shared thread in both scenarios: the message asks you to hand over a credential directly, and justifies it with authority (\"I'm a moderator,\" \"we're IT\") plus urgency (\"before it's suspended,\" \"before further attempts succeed\"). No legitimate support process anywhere works by asking for your password in a chat message or email reply.",
+      body: 'Notice the shared thread in both scenarios: the message asks you to hand over a credential directly, and justifies it with authority ("I\'m a moderator," "we\'re IT") plus urgency ("before it\'s suspended," "before further attempts succeed"). No legitimate support process anywhere works by asking for your password in a chat message or email reply.',
     },
     {
       type: "question",
-      prompt: "A message claiming to be tech support asks you to send your password to \"verify\" your account. What's true?",
+      prompt:
+        'A message claiming to be tech support asks you to send your password to "verify" your account. What\'s true?',
       options: [
         { id: "a", text: "This is reasonable if the message sounds official enough" },
-        { id: "b", text: "Legitimate support essentially never needs your actual password to verify or fix an account" },
+        {
+          id: "b",
+          text: "Legitimate support essentially never needs your actual password to verify or fix an account",
+        },
       ],
       correctOptionId: "b",
       explanation:

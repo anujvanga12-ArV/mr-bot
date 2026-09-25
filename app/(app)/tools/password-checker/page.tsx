@@ -7,7 +7,7 @@ export default function PasswordCheckerPage() {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-2xl font-semibold">Password Checker</h1>
-        <p className="mt-1 text-muted-foreground">
+        <p className="text-muted-foreground mt-1">
           See what makes a password strong or weak, using made-up example strings.
         </p>
       </div>

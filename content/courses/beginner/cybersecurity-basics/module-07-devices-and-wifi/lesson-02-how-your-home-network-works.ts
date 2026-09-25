@@ -4,7 +4,8 @@ export const howYourHomeNetworkWorks: Lesson = {
   slug: "how-your-home-network-works",
   title: "How Your Home Network Works",
   estimatedMinutes: 9,
-  objective: "Explain, in plain terms, what a router does and what an IP address and DNS actually are.",
+  objective:
+    "Explain, in plain terms, what a router does and what an IP address and DNS actually are.",
   blocks: [
     {
       type: "text",
@@ -69,7 +70,10 @@ export const howYourHomeNetworkWorks: Lesson = {
       type: "question",
       prompt: "What does DNS actually do?",
       options: [
-        { id: "a", text: "It translates a website name into the IP address needed to actually reach it" },
+        {
+          id: "a",
+          text: "It translates a website name into the IP address needed to actually reach it",
+        },
         { id: "b", text: "It encrypts your internet traffic" },
         { id: "c", text: "It's another name for a router" },
       ],

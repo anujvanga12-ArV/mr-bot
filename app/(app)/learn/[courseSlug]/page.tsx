@@ -6,11 +6,7 @@ import { getCourseProgressDetail } from "@/services/progress-service";
 import { createClient } from "@/lib/supabase/server";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
-export default async function CoursePage({
-  params,
-}: {
-  params: Promise<{ courseSlug: string }>;
-}) {
+export default async function CoursePage({ params }: { params: Promise<{ courseSlug: string }> }) {
   const { courseSlug } = await params;
   const course = getCourse(courseSlug);
   if (!course) {
@@ -36,7 +32,7 @@ export default async function CoursePage({
     <div className="flex flex-col gap-8">
       <div>
         <h1 className="text-2xl font-semibold">{course.title}</h1>
-        <p className="mt-1 text-muted-foreground">{course.description}</p>
+        <p className="text-muted-foreground mt-1">{course.description}</p>
       </div>
 
       <div className="flex flex-col gap-6">
@@ -54,17 +50,17 @@ export default async function CoursePage({
                   <Link
                     key={lesson.slug}
                     href={`/learn/${courseSlug}/${mod.slug}/${lesson.slug}`}
-                    className="flex items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-secondary"
+                    className="hover:bg-secondary flex items-center justify-between rounded-md px-3 py-2 text-sm"
                   >
                     <span className="flex items-center gap-2">
                       {status === "completed" ? (
                         <CheckCircle2 className="size-4 text-emerald-600" />
                       ) : (
-                        <Circle className="size-4 text-muted-foreground" />
+                        <Circle className="text-muted-foreground size-4" />
                       )}
                       {lesson.title}
                     </span>
-                    <span className="text-xs text-muted-foreground">
+                    <span className="text-muted-foreground text-xs">
                       {lesson.estimatedMinutes} min
                     </span>
                   </Link>

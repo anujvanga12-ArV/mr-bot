@@ -36,7 +36,13 @@ const COMMON_PASSWORDS = new Set([
   "dragon",
 ]);
 
-const SEQUENTIAL_RUNS = ["0123456789", "abcdefghijklmnopqrstuvwxyz", "qwertyuiop", "asdfghjkl", "zxcvbnm"];
+const SEQUENTIAL_RUNS = [
+  "0123456789",
+  "abcdefghijklmnopqrstuvwxyz",
+  "qwertyuiop",
+  "asdfghjkl",
+  "zxcvbnm",
+];
 const SEQUENTIAL_RUN_LENGTH = 4;
 
 function findSequentialRun(lower: string): string | null {
@@ -66,7 +72,8 @@ export function analyzePassword(value: string): PasswordAnalysisResult {
     patterns.push({
       id: "common-password",
       label: "One of the most commonly used passwords",
-      detail: "Lists of the most common passwords are the very first thing automated guessing tools try.",
+      detail:
+        "Lists of the most common passwords are the very first thing automated guessing tools try.",
     });
   }
 
@@ -83,7 +90,8 @@ export function analyzePassword(value: string): PasswordAnalysisResult {
     patterns.push({
       id: "repeated-character",
       label: "Contains a repeated character run",
-      detail: "Repeating the same character several times adds length without adding much real unpredictability.",
+      detail:
+        "Repeating the same character several times adds length without adding much real unpredictability.",
     });
   }
 
@@ -91,7 +99,8 @@ export function analyzePassword(value: string): PasswordAnalysisResult {
     patterns.push({
       id: "year-like-number",
       label: "Contains what looks like a year",
-      detail: "Birth years and the current year are commonly appended to passwords, and guessing tools check for exactly that.",
+      detail:
+        "Birth years and the current year are commonly appended to passwords, and guessing tools check for exactly that.",
     });
   }
 

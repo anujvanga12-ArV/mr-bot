@@ -44,23 +44,23 @@ export default async function LessonPage({ params }: { params: Promise<LessonPar
   return (
     <article className="flex flex-col gap-8">
       <div>
-        <p className="text-sm text-muted-foreground">{lesson.estimatedMinutes} min</p>
+        <p className="text-muted-foreground text-sm">{lesson.estimatedMinutes} min</p>
         <h1 className="text-2xl font-semibold">{lesson.title}</h1>
-        <p className="mt-1 text-muted-foreground">{lesson.objective}</p>
+        <p className="text-muted-foreground mt-1">{lesson.objective}</p>
       </div>
 
       <LessonRenderer blocks={lesson.blocks} />
 
       <Link
         href={`/tutor?lesson=${lessonSlug}`}
-        className="w-fit text-sm text-muted-foreground underline underline-offset-4 hover:text-foreground"
+        className="text-muted-foreground hover:text-foreground w-fit text-sm underline underline-offset-4"
       >
         Ask the AI tutor about this lesson
       </Link>
 
       {lesson.quiz ? <LessonQuizRunner quiz={lesson.quiz} /> : null}
 
-      <div className="flex items-center justify-between border-t border-border pt-6">
+      <div className="border-border flex items-center justify-between border-t pt-6">
         <MarkCompleteButton lessonSlug={lessonSlug} initiallyCompleted={isCompleted} />
         {next ? (
           <Link

@@ -15,9 +15,7 @@ export default async function SignUpPage({
       <div className="w-full max-w-sm">
         <div className="mb-8 text-center">
           <h1 className="text-2xl font-semibold">Start learning</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Create your free MR.BOT account.
-          </p>
+          <p className="text-muted-foreground mt-1 text-sm">Create your free MR.BOT account.</p>
         </div>
         <SignUpForm next={next ?? "/dashboard"} />
       </div>

@@ -34,10 +34,9 @@ export default function HomePage() {
         <h1 className="text-4xl font-semibold tracking-tight sm:text-5xl">
           Learn how to stay safe online — then keep going.
         </h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          MR.BOT teaches cybersecurity from your very first lesson through serious technical
-          depth, with interactive scenarios, real quizzes, and an AI tutor that meets you at your
-          level.
+        <p className="text-muted-foreground mt-4 text-lg">
+          MR.BOT teaches cybersecurity from your very first lesson through serious technical depth,
+          with interactive scenarios, real quizzes, and an AI tutor that meets you at your level.
         </p>
         <div className="mt-8 flex items-center justify-center gap-3">
           <Link href="/signup" className={buttonVariants({ size: "lg" })}>
@@ -49,7 +48,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-t border-border bg-secondary/40">
+      <section className="border-border bg-secondary/40 border-t">
         <div className="mx-auto max-w-5xl px-4 py-16">
           <h2 className="text-center text-2xl font-semibold">
             From &ldquo;I know nothing about this&rdquo; to genuinely knowledgeable
@@ -58,11 +57,11 @@ export default function HomePage() {
             {PROGRESSION.map((step, i) => (
               <Card key={step.level}>
                 <CardHeader>
-                  <p className="text-sm text-muted-foreground">Level {i + 1}</p>
+                  <p className="text-muted-foreground text-sm">Level {i + 1}</p>
                   <CardTitle>{step.level}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-sm text-muted-foreground">{step.description}</p>
+                  <p className="text-muted-foreground text-sm">{step.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -75,16 +74,16 @@ export default function HomePage() {
           {FEATURES.map((feature) => (
             <div key={feature.title}>
               <h3 className="font-semibold">{feature.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{feature.description}</p>
+              <p className="text-muted-foreground mt-2 text-sm">{feature.description}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="border-t border-border">
+      <section className="border-border border-t">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center">
           <h2 className="text-2xl font-semibold">Your first lesson takes ten minutes.</h2>
-          <p className="mt-2 text-muted-foreground">No credit card, no prior knowledge required.</p>
+          <p className="text-muted-foreground mt-2">No credit card, no prior knowledge required.</p>
           <div className="mt-6">
             <Link href="/signup" className={buttonVariants({ size: "lg" })}>
               Create your account

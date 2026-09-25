@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { getKnownConnectionFacts, getNetworkGuidance, type NetworkTrust } from "@/lib/tools/connection-safety";
+import {
+  getKnownConnectionFacts,
+  getNetworkGuidance,
+  type NetworkTrust,
+} from "@/lib/tools/connection-safety";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -29,15 +33,14 @@ export function WifiChecker() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <h2 className="text-sm font-semibold text-muted-foreground">What we can actually check</h2>
-        <p className="mt-1 text-sm text-muted-foreground">
-          A browser can&apos;t see your Wi-Fi network&apos;s own security type — that information
-          is hidden from web pages on purpose. Here&apos;s what&apos;s actually verifiable from
-          here:
+        <h2 className="text-muted-foreground text-sm font-semibold">What we can actually check</h2>
+        <p className="text-muted-foreground mt-1 text-sm">
+          A browser can&apos;t see your Wi-Fi network&apos;s own security type — that information is
+          hidden from web pages on purpose. Here&apos;s what&apos;s actually verifiable from here:
         </p>
         <div className="mt-3 flex flex-col gap-2">
           {facts.map((fact) => (
-            <div key={fact.id} className="rounded-md border border-border p-3 text-sm">
+            <div key={fact.id} className="border-border rounded-md border p-3 text-sm">
               <p className="font-medium">
                 {fact.label}: {fact.value}
               </p>
@@ -48,8 +51,8 @@ export function WifiChecker() {
       </div>
 
       <div>
-        <h2 className="text-sm font-semibold text-muted-foreground">Guided self-check</h2>
-        <p className="mb-3 mt-1 text-sm text-muted-foreground">
+        <h2 className="text-muted-foreground text-sm font-semibold">Guided self-check</h2>
+        <p className="text-muted-foreground mt-1 mb-3 text-sm">
           Answer honestly about the network you&apos;re on right now.
         </p>
 
@@ -97,7 +100,7 @@ export function WifiChecker() {
       {guidance ? (
         <div className={cn("rounded-md border p-4 text-sm", GUIDANCE_STYLES[guidance.severity])}>
           <p className="font-medium">{guidance.headline}</p>
-          <p className="mt-1 text-muted-foreground">{guidance.detail}</p>
+          <p className="text-muted-foreground mt-1">{guidance.detail}</p>
         </div>
       ) : null}
     </div>

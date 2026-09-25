@@ -4,7 +4,8 @@ export const privacySettingsAndOversharing: Lesson = {
   slug: "privacy-settings-and-oversharing",
   title: "Privacy Settings and Oversharing",
   estimatedMinutes: 8,
-  objective: "Apply privacy-setting awareness specifically to social media, including location data.",
+  objective:
+    "Apply privacy-setting awareness specifically to social media, including location data.",
   blocks: [
     {
       type: "text",
@@ -23,7 +24,7 @@ export const privacySettingsAndOversharing: Lesson = {
     {
       type: "scenario",
       setup:
-        "You post a photo from a trip, tagged with your exact current location, saying \"Having a great time away from home for the week!\"",
+        'You post a photo from a trip, tagged with your exact current location, saying "Having a great time away from home for the week!"',
       choices: [
         {
           id: "seems-harmless",
@@ -43,13 +44,17 @@ export const privacySettingsAndOversharing: Lesson = {
     },
     {
       type: "text",
-      body: "A practical habit: periodically check who can actually see your posts, not just what the posts say. Default audiences (\"public,\" \"friends of friends\") sometimes reach far more people than you'd assume, and platforms occasionally reset settings after updates.",
+      body: 'A practical habit: periodically check who can actually see your posts, not just what the posts say. Default audiences ("public," "friends of friends") sometimes reach far more people than you\'d assume, and platforms occasionally reset settings after updates.',
     },
     {
       type: "question",
-      prompt: "What's the main reason geotagging deserves specific caution, beyond general oversharing?",
+      prompt:
+        "What's the main reason geotagging deserves specific caution, beyond general oversharing?",
       options: [
-        { id: "a", text: "It reveals exact location data, which combined with other posts can reveal patterns like when you're not home" },
+        {
+          id: "a",
+          text: "It reveals exact location data, which combined with other posts can reveal patterns like when you're not home",
+        },
         { id: "b", text: "It has no real privacy implications" },
       ],
       correctOptionId: "a",

@@ -26,13 +26,16 @@ export function MarkCompleteButton({
           Lesson complete
         </p>
         {awards?.newSkills.map((skill) => (
-          <p key={skill.slug} className="flex items-center gap-2 text-sm text-accent-foreground">
+          <p key={skill.slug} className="text-accent-foreground flex items-center gap-2 text-sm">
             <Sparkles className="size-4" />
             Skill unlocked: {skill.name}
           </p>
         ))}
         {awards?.newAchievements.map((achievement) => (
-          <p key={achievement.slug} className="flex items-center gap-2 text-sm text-accent-foreground">
+          <p
+            key={achievement.slug}
+            className="text-accent-foreground flex items-center gap-2 text-sm"
+          >
             <Award className="size-4" />
             Achievement unlocked: {achievement.name}
           </p>
@@ -61,7 +64,7 @@ export function MarkCompleteButton({
       >
         {isPending ? "Saving…" : "Mark lesson complete"}
       </Button>
-      {error ? <p className="text-sm text-destructive">{error}</p> : null}
+      {error ? <p className="text-destructive text-sm">{error}</p> : null}
     </div>
   );
 }

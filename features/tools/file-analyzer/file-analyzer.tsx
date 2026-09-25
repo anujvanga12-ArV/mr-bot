@@ -1,7 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { analyzeFileMetadata, computeSha256, type FileAnalysisResult } from "@/lib/tools/file-analysis";
+import {
+  analyzeFileMetadata,
+  computeSha256,
+  type FileAnalysisResult,
+} from "@/lib/tools/file-analysis";
 import { IndicatorList } from "@/features/tools/indicator-list";
 
 export function FileAnalyzer() {
@@ -24,7 +28,7 @@ export function FileAnalyzer() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="rounded-md border border-accent/40 bg-accent/10 p-3 text-sm">
+      <div className="border-accent/40 bg-accent/10 rounded-md border p-3 text-sm">
         This checks a file&apos;s name, extension, and size, and computes its hash — entirely in
         your browser. The file itself is never uploaded anywhere. It isn&apos;t a real antivirus
         scan: it can&apos;t see inside the file&apos;s actual contents.
@@ -36,7 +40,7 @@ export function FileAnalyzer() {
           const file = event.target.files?.[0];
           if (file) void handleFile(file);
         }}
-        className="text-sm file:mr-3 file:rounded-md file:border-0 file:bg-secondary file:px-3 file:py-1.5 file:text-sm file:font-medium"
+        className="file:bg-secondary text-sm file:mr-3 file:rounded-md file:border-0 file:px-3 file:py-1.5 file:text-sm file:font-medium"
       />
 
       {result ? (
@@ -57,8 +61,8 @@ export function FileAnalyzer() {
           </div>
 
           <div>
-            <p className="text-sm text-muted-foreground">SHA-256</p>
-            <p className="break-all font-mono text-xs">
+            <p className="text-muted-foreground text-sm">SHA-256</p>
+            <p className="font-mono text-xs break-all">
               {isHashing ? "Computing…" : (hash ?? "Unavailable")}
             </p>
           </div>

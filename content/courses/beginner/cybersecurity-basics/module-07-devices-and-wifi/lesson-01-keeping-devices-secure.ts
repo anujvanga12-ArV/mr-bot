@@ -49,8 +49,14 @@ export const keepingDevicesSecure: Lesson = {
       type: "question",
       prompt: "What's a reasonable way to decide whether to grant an app a specific permission?",
       options: [
-        { id: "a", text: "Grant everything an app asks for, since apps wouldn't ask without a reason" },
-        { id: "b", text: "Consider whether the app's actual function genuinely requires that permission" },
+        {
+          id: "a",
+          text: "Grant everything an app asks for, since apps wouldn't ask without a reason",
+        },
+        {
+          id: "b",
+          text: "Consider whether the app's actual function genuinely requires that permission",
+        },
       ],
       correctOptionId: "b",
       explanation:

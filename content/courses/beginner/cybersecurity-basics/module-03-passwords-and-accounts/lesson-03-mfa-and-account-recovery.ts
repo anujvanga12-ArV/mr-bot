@@ -17,7 +17,7 @@ export const mfaAndAccountRecovery: Lesson = {
         simpleDefinition:
           "Proving it's really you with two different things — usually your password, plus a code or approval on your phone.",
         technicalDefinition:
-          "Authentication using two or more independent factors, typically categorized as something you know (a password), something you have (a phone or security key), or something you are (a fingerprint). Requiring factors from different categories means a single leaked credential (a \"something you know\") isn't enough on its own to grant access.",
+          'Authentication using two or more independent factors, typically categorized as something you know (a password), something you have (a phone or security key), or something you are (a fingerprint). Requiring factors from different categories means a single leaked credential (a "something you know") isn\'t enough on its own to grant access.',
       },
     },
     {
@@ -47,14 +47,17 @@ export const mfaAndAccountRecovery: Lesson = {
     },
     {
       type: "text",
-      body: "Account recovery deserves the same care. Security questions like \"what's your pet's name\" or \"what city were you born in\" are often answerable from information you've posted publicly — which quietly undoes a strong password. Where possible, prefer recovery methods tied to something only you control, like a personal email or an authenticator app, over questions with guessable or publicly discoverable answers.",
+      body: 'Account recovery deserves the same care. Security questions like "what\'s your pet\'s name" or "what city were you born in" are often answerable from information you\'ve posted publicly — which quietly undoes a strong password. Where possible, prefer recovery methods tied to something only you control, like a personal email or an authenticator app, over questions with guessable or publicly discoverable answers.',
     },
     {
       type: "question",
       prompt: "What does MFA protect against that a strong, unique password alone doesn't?",
       options: [
         { id: "a", text: "Nothing — a strong password is already enough" },
-        { id: "b", text: "Someone who has obtained your correct password still can't log in without the second factor" },
+        {
+          id: "b",
+          text: "Someone who has obtained your correct password still can't log in without the second factor",
+        },
         { id: "c", text: "It only protects against guessing attacks, same as password strength" },
       ],
       correctOptionId: "b",
@@ -67,33 +70,46 @@ export const mfaAndAccountRecovery: Lesson = {
     questions: [
       {
         type: "question",
-        prompt: "Which matters more for password strength: satisfying a symbol/number checklist, or length and unpredictability?",
+        prompt:
+          "Which matters more for password strength: satisfying a symbol/number checklist, or length and unpredictability?",
         options: [
           { id: "a", text: "The checklist — symbols and numbers are what matter most" },
-          { id: "b", text: "Length and unpredictability — common patterns are guessed first regardless of symbols" },
+          {
+            id: "b",
+            text: "Length and unpredictability — common patterns are guessed first regardless of symbols",
+          },
         ],
         correctOptionId: "b",
-        explanation: "A long, unpredictable passphrase generally resists guessing better than a short password following a common symbol-substitution pattern.",
+        explanation:
+          "A long, unpredictable passphrase generally resists guessing better than a short password following a common symbol-substitution pattern.",
       },
       {
         type: "question",
         prompt: "Why is reusing even a strong password across sites risky?",
         options: [
-          { id: "a", text: "A breach on one site exposes a password that then works on your other accounts" },
+          {
+            id: "a",
+            text: "A breach on one site exposes a password that then works on your other accounts",
+          },
           { id: "b", text: "It isn't risky as long as the password itself is strong" },
         ],
         correctOptionId: "a",
-        explanation: "Reuse turns a single breach anywhere into access everywhere that password was used — this is credential stuffing.",
+        explanation:
+          "Reuse turns a single breach anywhere into access everywhere that password was used — this is credential stuffing.",
       },
       {
         type: "question",
         prompt: "What problem does a password manager solve?",
         options: [
           { id: "a", text: "It lets you safely reuse one memorable password everywhere" },
-          { id: "b", text: "It generates and remembers a unique strong password per site, without you memorizing each one" },
+          {
+            id: "b",
+            text: "It generates and remembers a unique strong password per site, without you memorizing each one",
+          },
         ],
         correctOptionId: "b",
-        explanation: "Password managers make uniqueness practical, which solves the reuse problem directly.",
+        explanation:
+          "Password managers make uniqueness practical, which solves the reuse problem directly.",
       },
       {
         type: "question",
@@ -103,7 +119,8 @@ export const mfaAndAccountRecovery: Lesson = {
           { id: "b", text: "You forget your password entirely" },
         ],
         correctOptionId: "a",
-        explanation: "MFA's core value is that a compromised password alone still isn't enough to log in.",
+        explanation:
+          "MFA's core value is that a compromised password alone still isn't enough to log in.",
       },
     ],
   },

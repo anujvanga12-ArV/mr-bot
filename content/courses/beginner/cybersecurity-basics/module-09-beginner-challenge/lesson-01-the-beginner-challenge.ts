@@ -14,7 +14,7 @@ export const theBeginnerChallenge: Lesson = {
     {
       type: "scenario",
       setup:
-        "An email arrives claiming to be from a streaming service you use: \"Your payment failed. Update your billing details within 24 hours to avoid service interruption: [link].\" You do use this service.",
+        'An email arrives claiming to be from a streaming service you use: "Your payment failed. Update your billing details within 24 hours to avoid service interruption: [link]." You do use this service.',
       choices: [
         {
           id: "click-update",
@@ -35,18 +35,18 @@ export const theBeginnerChallenge: Lesson = {
     {
       type: "scenario",
       setup:
-        "You're creating a new account and asked to set a password. You're considering \"Summer2024\" versus \"purple-kettle-orbit-nine\". Which should you choose, and would either benefit from something extra?",
+        'You\'re creating a new account and asked to set a password. You\'re considering "Summer2024" versus "purple-kettle-orbit-nine". Which should you choose, and would either benefit from something extra?',
       choices: [
         {
           id: "summer-password",
-          text: "\"Summer2024\" — it's easy to remember and has both letters and numbers.",
+          text: '"Summer2024" — it\'s easy to remember and has both letters and numbers.',
           isSafe: false,
           feedback:
             "This follows an extremely common, guessable pattern (season + year). Length and unpredictability matter more than mixing letters and numbers in a predictable way.",
         },
         {
           id: "kettle-plus-mfa",
-          text: "\"purple-kettle-orbit-nine\" — and turn on multi-factor authentication if it's offered.",
+          text: '"purple-kettle-orbit-nine" — and turn on multi-factor authentication if it\'s offered.',
           isSafe: true,
           feedback:
             "Both parts matter: the passphrase is longer and unpredictable, and MFA means even a leaked password isn't enough on its own to get in.",
@@ -56,7 +56,7 @@ export const theBeginnerChallenge: Lesson = {
     {
       type: "scenario",
       setup:
-        "A message in a gaming community, from an account styled like a staff member, says: \"We're verifying active players for a reward program. Reply with your login to confirm eligibility before the program closes tonight.\"",
+        'A message in a gaming community, from an account styled like a staff member, says: "We\'re verifying active players for a reward program. Reply with your login to confirm eligibility before the program closes tonight."',
       choices: [
         {
           id: "reply-with-login",
@@ -91,7 +91,7 @@ export const theBeginnerChallenge: Lesson = {
           text: "Run an antivirus scan and look into what the unfamiliar program actually is.",
           isSafe: true,
           feedback:
-            "Right approach — treating the combination of \"new download\" plus \"new unfamiliar program\" plus \"slowdown\" as worth checking, using the tools built for exactly this.",
+            'Right approach — treating the combination of "new download" plus "new unfamiliar program" plus "slowdown" as worth checking, using the tools built for exactly this.',
         },
       ],
     },
@@ -112,14 +112,14 @@ export const theBeginnerChallenge: Lesson = {
           text: "Use your phone's personal hotspot instead for anything sensitive like banking.",
           isSafe: true,
           feedback:
-            "Good call. Your own hotspot is a network you control, which removes the \"who else is on this network\" concern entirely for sensitive activity.",
+            'Good call. Your own hotspot is a network you control, which removes the "who else is on this network" concern entirely for sensitive activity.',
         },
       ],
     },
     {
       type: "scenario",
       setup:
-        "You're about to post a celebratory photo from a trip: exact location tagged, captioned \"First week of two away from home, having a blast!\", visible to the public.",
+        'You\'re about to post a celebratory photo from a trip: exact location tagged, captioned "First week of two away from home, having a blast!", visible to the public.',
       choices: [
         {
           id: "post-public",
@@ -130,7 +130,7 @@ export const theBeginnerChallenge: Lesson = {
         },
         {
           id: "adjust-privacy",
-          text: "Remove the exact location and the \"away from home\" detail, or limit the post's audience to close friends.",
+          text: 'Remove the exact location and the "away from home" detail, or limit the post\'s audience to close friends.',
           isSafe: true,
           feedback:
             "Right instinct — you can still share the moment without broadcasting exactly where you aren't right now, to everyone.",
@@ -150,16 +150,23 @@ export const theBeginnerChallenge: Lesson = {
         prompt: "Cybersecurity is best described as protecting...",
         options: [
           { id: "a", text: "Only banks and governments" },
-          { id: "b", text: "Any device, account, or information that could be accessed without permission" },
+          {
+            id: "b",
+            text: "Any device, account, or information that could be accessed without permission",
+          },
         ],
         correctOptionId: "b",
         explanation: "It applies at any scale, from a personal phone to an organization's servers.",
       },
       {
         type: "question",
-        prompt: "Why is it risky to post several individually 'harmless' personal details together?",
+        prompt:
+          "Why is it risky to post several individually 'harmless' personal details together?",
         options: [
-          { id: "a", text: "Combined, they can identify or locate someone even though each detail alone seemed fine" },
+          {
+            id: "a",
+            text: "Combined, they can identify or locate someone even though each detail alone seemed fine",
+          },
           { id: "b", text: "It isn't actually risky, since each detail is harmless" },
         ],
         correctOptionId: "a",
@@ -169,11 +176,18 @@ export const theBeginnerChallenge: Lesson = {
         type: "question",
         prompt: "What matters most for password strength?",
         options: [
-          { id: "a", text: "Length and unpredictability, more than following a symbol/number checklist" },
-          { id: "b", text: "Having at least one capital letter and one number, regardless of pattern" },
+          {
+            id: "a",
+            text: "Length and unpredictability, more than following a symbol/number checklist",
+          },
+          {
+            id: "b",
+            text: "Having at least one capital letter and one number, regardless of pattern",
+          },
         ],
         correctOptionId: "a",
-        explanation: "Common patterns with a symbol tacked on are still guessable — length and lack of pattern matter more.",
+        explanation:
+          "Common patterns with a symbol tacked on are still guessable — length and lack of pattern matter more.",
       },
       {
         type: "question",
@@ -183,17 +197,23 @@ export const theBeginnerChallenge: Lesson = {
           { id: "b", text: "Go to the site yourself, without using the email's link" },
         ],
         correctOptionId: "b",
-        explanation: "This sidesteps a potential fake login page entirely, regardless of how convincing the email looks.",
+        explanation:
+          "This sidesteps a potential fake login page entirely, regardless of how convincing the email looks.",
       },
       {
         type: "question",
-        prompt: "Someone claiming to be staff or support asks for your password to 'verify' your account. What's true?",
+        prompt:
+          "Someone claiming to be staff or support asks for your password to 'verify' your account. What's true?",
         options: [
-          { id: "a", text: "Legitimate staff essentially never need your actual password to verify anything" },
+          {
+            id: "a",
+            text: "Legitimate staff essentially never need your actual password to verify anything",
+          },
           { id: "b", text: "It's reasonable if they sound official enough" },
         ],
         correctOptionId: "a",
-        explanation: "This is one of the most reliable red flags across phishing and social engineering alike.",
+        explanation:
+          "This is one of the most reliable red flags across phishing and social engineering alike.",
       },
       {
         type: "question",
@@ -209,21 +229,32 @@ export const theBeginnerChallenge: Lesson = {
         type: "question",
         prompt: "Why does HTTPS matter more on public Wi-Fi specifically?",
         options: [
-          { id: "a", text: "Other devices may share that network, and HTTPS keeps your data unreadable to them" },
+          {
+            id: "a",
+            text: "Other devices may share that network, and HTTPS keeps your data unreadable to them",
+          },
           { id: "b", text: "Public Wi-Fi doesn't function without it" },
         ],
         correctOptionId: "a",
-        explanation: "The encryption matters everywhere, but the shared, unverified network is what makes it especially relevant on public Wi-Fi.",
+        explanation:
+          "The encryption matters everywhere, but the shared, unverified network is what makes it especially relevant on public Wi-Fi.",
       },
       {
         type: "question",
         prompt: "Why isn't deleting a post the same as fully erasing it everywhere?",
         options: [
-          { id: "a", text: "Copies (screenshots, shares) may already exist beyond the platform's control" },
-          { id: "b", text: "Deletion is always complete and permanent, everywhere it was ever seen" },
+          {
+            id: "a",
+            text: "Copies (screenshots, shares) may already exist beyond the platform's control",
+          },
+          {
+            id: "b",
+            text: "Deletion is always complete and permanent, everywhere it was ever seen",
+          },
         ],
         correctOptionId: "a",
-        explanation: "Deletion controls what the platform shows going forward — not copies that already left your control.",
+        explanation:
+          "Deletion controls what the platform shows going forward — not copies that already left your control.",
       },
     ],
   },

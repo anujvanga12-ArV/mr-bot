@@ -4,7 +4,8 @@ export const passwordReuseAndManagers: Lesson = {
   slug: "password-reuse-and-managers",
   title: "Password Reuse and Password Managers",
   estimatedMinutes: 8,
-  objective: "Explain why reusing passwords is risky and how a password manager solves the problem.",
+  objective:
+    "Explain why reusing passwords is risky and how a password manager solves the problem.",
   blocks: [
     {
       type: "text",
@@ -50,7 +51,10 @@ export const passwordReuseAndManagers: Lesson = {
       prompt: "Why doesn't a strong password protect you if it's reused across multiple sites?",
       options: [
         { id: "a", text: "Strong passwords always eventually get guessed anyway" },
-        { id: "b", text: "If one site is breached, the leaked password can be tried directly on your other accounts" },
+        {
+          id: "b",
+          text: "If one site is breached, the leaked password can be tried directly on your other accounts",
+        },
         { id: "c", text: "Password managers are actually less safe" },
       ],
       correctOptionId: "b",

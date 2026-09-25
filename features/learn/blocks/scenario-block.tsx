@@ -41,7 +41,7 @@ export function ScenarioBlockView({ block }: { block: ScenarioBlock }) {
                     choice.isSafe ? (
                       <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" />
                     ) : (
-                      <XCircle className="mt-0.5 size-4 shrink-0 text-destructive" />
+                      <XCircle className="text-destructive mt-0.5 size-4 shrink-0" />
                     )
                   ) : null}
                 </span>

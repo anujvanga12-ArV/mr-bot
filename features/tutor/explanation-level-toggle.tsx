@@ -11,7 +11,7 @@ export function ExplanationLevelToggle({
   onChange: (level: ExplanationLevel) => void;
 }) {
   return (
-    <div className="flex w-fit gap-1 rounded-md border border-border p-1">
+    <div className="border-border flex w-fit gap-1 rounded-md border p-1">
       {EXPLANATION_LEVELS.map((level) => (
         <button
           key={level.value}

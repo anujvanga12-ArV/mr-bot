@@ -100,8 +100,7 @@ export async function signIn(
       error.message === "Email not confirmed"
     ) {
       return {
-        error:
-          "Confirm your email before signing in — check your inbox for a link from Supabase.",
+        error: "Confirm your email before signing in — check your inbox for a link from Supabase.",
       };
     }
     return { error: "Incorrect email or password." };

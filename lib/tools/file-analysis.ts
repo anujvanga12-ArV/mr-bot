@@ -62,7 +62,8 @@ const DOCUMENT_LOOKING_EXTENSIONS = new Set([
 export function analyzeFileMetadata(file: FileMetadataInput): FileAnalysisResult {
   const parts = file.name.split(".");
   const extensionChain = parts.length > 1 ? parts.slice(1).map((part) => part.toLowerCase()) : [];
-  const finalExtension = extensionChain.length > 0 ? extensionChain[extensionChain.length - 1] : null;
+  const finalExtension =
+    extensionChain.length > 0 ? extensionChain[extensionChain.length - 1] : null;
   const precedingExtension =
     extensionChain.length >= 2 ? extensionChain[extensionChain.length - 2] : undefined;
 
@@ -70,9 +71,9 @@ export function analyzeFileMetadata(file: FileMetadataInput): FileAnalysisResult
 
   const hasDoubleExtensionRisk = Boolean(
     finalExtension &&
-      EXECUTABLE_EXTENSIONS.has(finalExtension) &&
-      precedingExtension &&
-      DOCUMENT_LOOKING_EXTENSIONS.has(precedingExtension),
+    EXECUTABLE_EXTENSIONS.has(finalExtension) &&
+    precedingExtension &&
+    DOCUMENT_LOOKING_EXTENSIONS.has(precedingExtension),
   );
 
   if (hasDoubleExtensionRisk && finalExtension) {
@@ -86,7 +87,8 @@ export function analyzeFileMetadata(file: FileMetadataInput): FileAnalysisResult
     indicators.push({
       id: "executable-extension",
       label: `This is a ".${finalExtension}" file — a program, not a document`,
-      detail: "Running it executes code on your device. Only run files like this from sources you specifically trust.",
+      detail:
+        "Running it executes code on your device. Only run files like this from sources you specifically trust.",
       severity: "caution",
     });
   }

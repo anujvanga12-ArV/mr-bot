@@ -4,7 +4,8 @@ export const functionsAndLists: Lesson = {
   slug: "functions-and-lists",
   title: "Functions and Lists",
   estimatedMinutes: 10,
-  objective: "Package logic into a reusable function, and use a list to hold multiple pieces of data you check with the same rule.",
+  objective:
+    "Package logic into a reusable function, and use a list to hold multiple pieces of data you check with the same rule.",
   blocks: [
     {
       type: "text",
@@ -37,7 +38,8 @@ export const functionsAndLists: Lesson = {
         { id: "c", text: '"example.com"' },
       ],
       correctOptionId: "b",
-      explanation: '"example.com" isn\'t in suspicious_domains, so the `in` check evaluates to False, and that\'s what gets returned.',
+      explanation:
+        "\"example.com\" isn't in suspicious_domains, so the `in` check evaluates to False, and that's what gets returned.",
     },
     {
       type: "code",
@@ -54,7 +56,8 @@ export const functionsAndLists: Lesson = {
         { id: "d", text: "No one" },
       ],
       correctOptionId: "b",
-      explanation: 'bob has 5 failed logins, which meets the >= 5 threshold — alice (1) and carol (0) don\'t.',
+      explanation:
+        "bob has 5 failed logins, which meets the >= 5 threshold — alice (1) and carol (0) don't.",
       hint: "Check each value against the threshold in the if statement.",
     },
   ],

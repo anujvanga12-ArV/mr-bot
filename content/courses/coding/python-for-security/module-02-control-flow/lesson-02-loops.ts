@@ -4,7 +4,8 @@ export const loops: Lesson = {
   slug: "loops",
   title: "Loops",
   estimatedMinutes: 10,
-  objective: "Use a for loop to check every item in a list — one of the most common patterns in small security scripts.",
+  objective:
+    "Use a for loop to check every item in a list — one of the most common patterns in small security scripts.",
   blocks: [
     {
       type: "text",
@@ -17,7 +18,7 @@ export const loops: Lesson = {
     },
     {
       type: "text",
-      body: "`name.split(\".\")[-1]` splits the filename on every period and takes the last piece — the extension. This is genuinely the same idea behind the double-extension check in the platform's own File Analyzer tool, just written out in Python instead of TypeScript.",
+      body: '`name.split(".")[-1]` splits the filename on every period and takes the last piece — the extension. This is genuinely the same idea behind the double-extension check in the platform\'s own File Analyzer tool, just written out in Python instead of TypeScript.',
     },
     {
       type: "question",
@@ -28,7 +29,8 @@ export const loops: Lesson = {
         { id: "c", text: "Nothing — .exe files are skipped entirely" },
       ],
       correctOptionId: "b",
-      explanation: '"exe" is in suspicious_extensions, so the if condition is True and "flagged" prints.',
+      explanation:
+        '"exe" is in suspicious_extensions, so the if condition is True and "flagged" prints.',
     },
     {
       type: "code",
@@ -37,7 +39,7 @@ export const loops: Lesson = {
     },
     {
       type: "question",
-      prompt: "How many times will \"Attempt\" print in the while-loop example above?",
+      prompt: 'How many times will "Attempt" print in the while-loop example above?',
       options: [
         { id: "a", text: "2" },
         { id: "b", text: "3" },
@@ -45,7 +47,8 @@ export const loops: Lesson = {
         { id: "d", text: "Forever — this is an infinite loop" },
       ],
       correctOptionId: "b",
-      explanation: "The loop runs while attempts < 3, for attempts = 0, 1, and 2 — three iterations — then stops once attempts becomes 3.",
+      explanation:
+        "The loop runs while attempts < 3, for attempts = 0, 1, and 2 — three iterations — then stops once attempts becomes 3.",
       hint: "Trace through the value of `attempts` on each pass: it starts at 0 and increases by 1 every loop.",
     },
   ],
@@ -54,7 +57,8 @@ export const loops: Lesson = {
     questions: [
       {
         type: "question",
-        prompt: 'What prints?\n\nscore = 7\nif score > 8:\n    print("A")\nelif score > 5:\n    print("B")\nelse:\n    print("C")',
+        prompt:
+          'What prints?\n\nscore = 7\nif score > 8:\n    print("A")\nelif score > 5:\n    print("B")\nelse:\n    print("C")',
         options: [
           { id: "a", text: '"A"' },
           { id: "b", text: '"B"' },
@@ -71,7 +75,8 @@ export const loops: Lesson = {
           { id: "b", text: "Python runs that branch and also checks the remaining ones" },
         ],
         correctOptionId: "a",
-        explanation: "Only the first matching branch runs — the rest of the chain is skipped entirely.",
+        explanation:
+          "Only the first matching branch runs — the rest of the chain is skipped entirely.",
       },
       {
         type: "question",
@@ -91,7 +96,8 @@ export const loops: Lesson = {
           { id: "b", text: "A fixed number of times, set when it's written" },
         ],
         correctOptionId: "a",
-        explanation: "Unlike a for loop over a fixed list, a while loop's length depends entirely on when its condition becomes False.",
+        explanation:
+          "Unlike a for loop over a fixed list, a while loop's length depends entirely on when its condition becomes False.",
       },
     ],
   },

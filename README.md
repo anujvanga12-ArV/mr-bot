@@ -177,7 +177,7 @@ left out rather than faked).
 - Achievements cover: completing your first lesson, finishing the Passwords & Accounts module,
   finishing the Phishing & Online Scams module, completing the entire beginner course, and
   completing the entire Python for Security course.
-- `services/skill-service.ts` re-evaluates the user's *actual* completion state from `progress`
+- `services/skill-service.ts` re-evaluates the user's _actual_ completion state from `progress`
   after every lesson completion — it never trusts a flag saying "a module just finished," which
   matters if someone completes lessons out of order.
 - Newly unlocked skills/achievements surface immediately on the lesson page (`completeLesson`
@@ -249,6 +249,7 @@ Intermediate/Advanced courses, advanced sandboxed labs, deeper analytics, commun
 leaderboards.
 
 **Known, deliberate gaps, stated plainly:**
+
 - Live Python code execution — not built; see the Coding Section note above for why.
 - Foundations/Intermediate/Advanced courses, and the higher-level skills/achievements that
   depend on them (Network Explorer, Linux Learner, etc.) — no content exists yet, so nothing

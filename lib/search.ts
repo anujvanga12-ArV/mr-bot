@@ -92,7 +92,11 @@ function buildLessonEntries(): LessonSearchEntry[] {
   return entries;
 }
 
-const ALL_ENTRIES: SearchEntry[] = [...buildVocabEntries(), ...buildLessonEntries(), ...TOOL_ENTRIES];
+const ALL_ENTRIES: SearchEntry[] = [
+  ...buildVocabEntries(),
+  ...buildLessonEntries(),
+  ...TOOL_ENTRIES,
+];
 
 const MAX_RESULTS = 20;
 

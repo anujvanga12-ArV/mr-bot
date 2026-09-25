@@ -45,7 +45,7 @@ export const spottingFakeProfiles: Lesson = {
           text: "Click it — you already know and trust this account.",
           isSafe: false,
           feedback:
-            "The account being familiar doesn't guarantee the person controlling it right now is your friend — accounts get compromised, and \"you have to see this\" plus a link is a very common template for exactly that situation.",
+            'The account being familiar doesn\'t guarantee the person controlling it right now is your friend — accounts get compromised, and "you have to see this" plus a link is a very common template for exactly that situation.',
         },
         {
           id: "verify-out-of-band",
@@ -58,10 +58,14 @@ export const spottingFakeProfiles: Lesson = {
     },
     {
       type: "question",
-      prompt: "Someone urges you to move a new conversation to a different app very quickly. What does this usually indicate?",
+      prompt:
+        "Someone urges you to move a new conversation to a different app very quickly. What does this usually indicate?",
       options: [
         { id: "a", text: "Nothing notable — people prefer different apps for different reasons" },
-        { id: "b", text: "A common tactic to move away from a platform's safety/reporting tools and outside observers" },
+        {
+          id: "b",
+          text: "A common tactic to move away from a platform's safety/reporting tools and outside observers",
+        },
       ],
       correctOptionId: "b",
       explanation:

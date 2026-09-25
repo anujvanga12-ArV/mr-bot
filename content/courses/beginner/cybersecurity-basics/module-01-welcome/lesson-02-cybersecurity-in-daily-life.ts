@@ -59,7 +59,10 @@ export const cybersecurityInDailyLife: Lesson = {
       options: [
         { id: "a", text: "The same thing" },
         { id: "b", text: "Unrelated — one has nothing to do with the other" },
-        { id: "c", text: "Both needed — you protect your own accounts, they protect the systems everyone shares" },
+        {
+          id: "c",
+          text: "Both needed — you protect your own accounts, they protect the systems everyone shares",
+        },
       ],
       correctOptionId: "c",
       explanation:

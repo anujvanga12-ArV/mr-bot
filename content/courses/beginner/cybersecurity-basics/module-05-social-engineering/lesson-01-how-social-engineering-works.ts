@@ -4,7 +4,8 @@ export const howSocialEngineeringWorks: Lesson = {
   slug: "how-social-engineering-works",
   title: "How Social Engineering Works",
   estimatedMinutes: 8,
-  objective: "Name the core psychological levers social engineering relies on, and why they work on everyone.",
+  objective:
+    "Name the core psychological levers social engineering relies on, and why they work on everyone.",
   blocks: [
     {
       type: "text",
@@ -22,7 +23,7 @@ export const howSocialEngineeringWorks: Lesson = {
     },
     {
       type: "text",
-      body: "A handful of levers show up again and again, in different disguises:\n\n• Urgency — \"act now or lose access.\"\n• Fear — \"something bad has already happened.\"\n• Authority — \"I'm from IT / support / an admin.\"\n• Curiosity — \"you won't believe this.\"\n• Trust — impersonating someone you already know.\n\nNone of these require any hacking. They work by short-circuiting the moment you'd normally pause and think.",
+      body: 'A handful of levers show up again and again, in different disguises:\n\n• Urgency — "act now or lose access."\n• Fear — "something bad has already happened."\n• Authority — "I\'m from IT / support / an admin."\n• Curiosity — "you won\'t believe this."\n• Trust — impersonating someone you already know.\n\nNone of these require any hacking. They work by short-circuiting the moment you\'d normally pause and think.',
     },
     {
       type: "text",
@@ -33,7 +34,10 @@ export const howSocialEngineeringWorks: Lesson = {
       prompt: "Social engineering is most accurately described as...",
       options: [
         { id: "a", text: "A technical hacking method that exploits software bugs" },
-        { id: "b", text: "Manipulating a person's psychology to get them to act against their own interest" },
+        {
+          id: "b",
+          text: "Manipulating a person's psychology to get them to act against their own interest",
+        },
         { id: "c", text: "Something that only works on people who aren't paying attention" },
       ],
       correctOptionId: "b",

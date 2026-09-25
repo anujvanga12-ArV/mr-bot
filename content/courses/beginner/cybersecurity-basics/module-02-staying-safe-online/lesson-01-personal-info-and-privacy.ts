@@ -4,7 +4,8 @@ export const personalInfoAndPrivacy: Lesson = {
   slug: "personal-information-and-privacy",
   title: "Personal Information and Privacy Online",
   estimatedMinutes: 8,
-  objective: "Recognize what counts as personal information and why controlling who sees it matters.",
+  objective:
+    "Recognize what counts as personal information and why controlling who sees it matters.",
   blocks: [
     {
       type: "text",
@@ -47,10 +48,14 @@ export const personalInfoAndPrivacy: Lesson = {
     },
     {
       type: "question",
-      prompt: "Why is it more useful to think about combinations of information rather than single details?",
+      prompt:
+        "Why is it more useful to think about combinations of information rather than single details?",
       options: [
         { id: "a", text: "Because a single detail is never risky under any circumstances" },
-        { id: "b", text: "Because combining several details can identify or locate someone even when each detail alone seems harmless" },
+        {
+          id: "b",
+          text: "Because combining several details can identify or locate someone even when each detail alone seems harmless",
+        },
         { id: "c", text: "Because privacy settings don't actually do anything" },
       ],
       correctOptionId: "b",

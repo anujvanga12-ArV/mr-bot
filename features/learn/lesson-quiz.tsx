@@ -36,7 +36,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
       </CardHeader>
       <CardContent className="flex flex-col gap-6">
         {result ? (
-          <p className="rounded-md bg-secondary p-3 text-sm font-medium">
+          <p className="bg-secondary rounded-md p-3 text-sm font-medium">
             You scored {result.score} out of {result.total}.
           </p>
         ) : null}
@@ -47,7 +47,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
 
           return (
             <div key={questionKey} className="flex flex-col gap-2">
-              <p className="whitespace-pre-wrap text-sm font-medium">
+              <p className="text-sm font-medium whitespace-pre-wrap">
                 {index + 1}. {question.prompt}
               </p>
               <div className="flex flex-col gap-2">
@@ -61,9 +61,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
                       key={option.id}
                       type="button"
                       disabled={Boolean(result)}
-                      onClick={() =>
-                        setAnswers((prev) => ({ ...prev, [questionKey]: option.id }))
-                      }
+                      onClick={() => setAnswers((prev) => ({ ...prev, [questionKey]: option.id }))}
                       className={cn(
                         "rounded-md border px-4 py-2.5 text-left text-sm transition-colors disabled:cursor-default",
                         revealCorrect && "border-emerald-500/50 bg-emerald-500/10",
@@ -78,7 +76,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
                           <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" />
                         ) : null}
                         {revealWrong ? (
-                          <XCircle className="mt-0.5 size-4 shrink-0 text-destructive" />
+                          <XCircle className="text-destructive mt-0.5 size-4 shrink-0" />
                         ) : null}
                       </span>
                     </button>
@@ -86,7 +84,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
                 })}
               </div>
               {result ? (
-                <p className="text-sm text-muted-foreground">{question.explanation}</p>
+                <p className="text-muted-foreground text-sm">{question.explanation}</p>
               ) : null}
             </div>
           );
@@ -97,7 +95,7 @@ export function LessonQuizRunner({ quiz }: { quiz: LessonQuiz }) {
             <Button type="button" disabled={!allAnswered || isPending} onClick={handleSubmit}>
               {isPending ? "Submitting…" : "Submit quiz"}
             </Button>
-            {error ? <p className="mt-2 text-sm text-destructive">{error}</p> : null}
+            {error ? <p className="text-destructive mt-2 text-sm">{error}</p> : null}
           </div>
         ) : null}
       </CardContent>

@@ -12,14 +12,14 @@ export function VocabBlockView({ block }: { block: VocabBlock }) {
   return (
     <Card className="border-accent/30 bg-accent/5">
       <CardContent className="flex flex-col gap-2 pt-6">
-        <p className="text-sm font-semibold uppercase tracking-wide text-accent-foreground/70">
+        <p className="text-accent-foreground/70 text-sm font-semibold tracking-wide uppercase">
           Term
         </p>
         <p className="text-lg font-semibold">{term.term}</p>
-        <p className="text-sm text-foreground/80">{term.simpleDefinition}</p>
+        <p className="text-foreground/80 text-sm">{term.simpleDefinition}</p>
 
         {showTechnical ? (
-          <p className="mt-2 border-t border-border pt-3 text-sm text-muted-foreground">
+          <p className="border-border text-muted-foreground mt-2 border-t pt-3 text-sm">
             {term.technicalDefinition}
           </p>
         ) : null}
@@ -28,7 +28,7 @@ export function VocabBlockView({ block }: { block: VocabBlock }) {
           type="button"
           variant="ghost"
           size="sm"
-          className="mt-1 w-fit px-0 text-accent-foreground hover:bg-transparent hover:underline"
+          className="text-accent-foreground mt-1 w-fit px-0 hover:bg-transparent hover:underline"
           onClick={() => setShowTechnical((v) => !v)}
         >
           {showTechnical ? "Hide technical definition" : "Learn the technical definition"}

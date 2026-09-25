@@ -13,7 +13,7 @@ export const practiceIdentifyingPhishing: Lesson = {
     {
       type: "scenario",
       setup:
-        "A message claiming to be from a delivery company says: \"We attempted delivery but need you to confirm your address and pay a small $2.50 redelivery fee within 2 hours: [link]\". You are expecting a package.",
+        'A message claiming to be from a delivery company says: "We attempted delivery but need you to confirm your address and pay a small $2.50 redelivery fee within 2 hours: [link]". You are expecting a package.',
       choices: [
         {
           id: "pay-it",
@@ -54,10 +54,14 @@ export const practiceIdentifyingPhishing: Lesson = {
     },
     {
       type: "question",
-      prompt: "A message uses a very small dollar amount to make a scam fee feel worth ignoring the risk. What's this an example of?",
+      prompt:
+        "A message uses a very small dollar amount to make a scam fee feel worth ignoring the risk. What's this an example of?",
       options: [
         { id: "a", text: "A legitimate business practice" },
-        { id: "b", text: "Reducing the perceived stakes so you skip the caution you'd normally apply" },
+        {
+          id: "b",
+          text: "Reducing the perceived stakes so you skip the caution you'd normally apply",
+        },
       ],
       correctOptionId: "b",
       explanation:
@@ -71,41 +75,57 @@ export const practiceIdentifyingPhishing: Lesson = {
         type: "question",
         prompt: "What combination of traits makes a message likely to be phishing?",
         options: [
-          { id: "a", text: "An unexpected request, urgency, and a request to click a link or give credentials" },
+          {
+            id: "a",
+            text: "An unexpected request, urgency, and a request to click a link or give credentials",
+          },
           { id: "b", text: "Any message that mentions a deadline of any kind" },
         ],
         correctOptionId: "a",
-        explanation: "It's the combination — not any single trait alone — that forms the recognizable pattern.",
+        explanation:
+          "It's the combination — not any single trait alone — that forms the recognizable pattern.",
       },
       {
         type: "question",
-        prompt: "The safest way to check if an account issue mentioned in an email is real is to...",
+        prompt:
+          "The safest way to check if an account issue mentioned in an email is real is to...",
         options: [
           { id: "a", text: "Click the link in the email to check" },
           { id: "b", text: "Go to the site directly yourself, without using the email's link" },
         ],
         correctOptionId: "b",
-        explanation: "This sidesteps fake login pages entirely, regardless of how convincing the email looked.",
+        explanation:
+          "This sidesteps fake login pages entirely, regardless of how convincing the email looked.",
       },
       {
         type: "question",
-        prompt: "A friend's account sends an oddly-worded, curiosity-baiting link. What's the safest response?",
+        prompt:
+          "A friend's account sends an oddly-worded, curiosity-baiting link. What's the safest response?",
         options: [
           { id: "a", text: "Click it since it's from someone you know" },
-          { id: "b", text: "Verify with your friend through a separate channel before clicking anything" },
+          {
+            id: "b",
+            text: "Verify with your friend through a separate channel before clicking anything",
+          },
         ],
         correctOptionId: "b",
-        explanation: "A compromised account isn't really controlled by your friend anymore — verifying separately confirms who's actually sending it.",
+        explanation:
+          "A compromised account isn't really controlled by your friend anymore — verifying separately confirms who's actually sending it.",
       },
       {
         type: "question",
-        prompt: "Why do phishing messages often use a very small dollar amount or a very short deadline?",
+        prompt:
+          "Why do phishing messages often use a very small dollar amount or a very short deadline?",
         options: [
-          { id: "a", text: "To lower your guard by making the request feel too trivial or too urgent to question" },
+          {
+            id: "a",
+            text: "To lower your guard by making the request feel too trivial or too urgent to question",
+          },
           { id: "b", text: "Because scammers legally can't ask for large amounts" },
         ],
         correctOptionId: "a",
-        explanation: "Both tactics are designed to shortcut the moment of caution you'd normally apply.",
+        explanation:
+          "Both tactics are designed to shortcut the moment of caution you'd normally apply.",
       },
     ],
   },

@@ -5,7 +5,9 @@ describe("buildSystemPrompt", () => {
   it("includes the firm safety boundaries regardless of level", () => {
     const prompt = buildSystemPrompt({ learningLevel: "advanced", explanationLevel: "technical" });
     expect(prompt).toContain("FIRM BOUNDARIES");
-    expect(prompt).toContain("Never give step-by-step instructions for gaining unauthorized access");
+    expect(prompt).toContain(
+      "Never give step-by-step instructions for gaining unauthorized access",
+    );
   });
 
   it("reflects the requested explanation level", () => {

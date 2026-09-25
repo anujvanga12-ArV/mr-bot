@@ -8,7 +8,7 @@ export const fakeMessagesAndFakePages: Lesson = {
   blocks: [
     {
       type: "text",
-      body: "Phishing isn't just an email problem. The same tricks show up as text messages (\"smishing\"), direct messages on social platforms and in games, and fake pages designed to look identical to a real login screen. The disguise changes; the pattern — urgency plus a request to click or share something — stays the same.",
+      body: 'Phishing isn\'t just an email problem. The same tricks show up as text messages ("smishing"), direct messages on social platforms and in games, and fake pages designed to look identical to a real login screen. The disguise changes; the pattern — urgency plus a request to click or share something — stays the same.',
     },
     {
       type: "vocabulary",
@@ -51,7 +51,7 @@ export const fakeMessagesAndFakePages: Lesson = {
           text: "Click it — you're curious, and it's from a friend's account.",
           isSafe: false,
           feedback:
-            "\"It's from a friend's account\" is doing a lot of work here — if their account was compromised, the message isn't really from them anymore. Curiosity about being \"in a video\" is a classic hook for exactly this reason.",
+            '"It\'s from a friend\'s account" is doing a lot of work here — if their account was compromised, the message isn\'t really from them anymore. Curiosity about being "in a video" is a classic hook for exactly this reason.',
         },
         {
           id: "verify-separately",

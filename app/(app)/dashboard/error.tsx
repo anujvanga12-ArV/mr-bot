@@ -16,9 +16,9 @@ export default function DashboardError({
   }, [error]);
 
   return (
-    <div className="flex flex-col items-center gap-3 rounded-lg border border-dashed border-border py-16 text-center">
+    <div className="border-border flex flex-col items-center gap-3 rounded-lg border border-dashed py-16 text-center">
       <p className="font-medium">Something went wrong loading your dashboard.</p>
-      <p className="max-w-sm text-sm text-muted-foreground">
+      <p className="text-muted-foreground max-w-sm text-sm">
         This has been logged. You can try again, or come back in a moment.
       </p>
       <Button onClick={reset} variant="outline" size="sm">

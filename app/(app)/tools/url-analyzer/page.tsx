@@ -7,7 +7,7 @@ export default function UrlAnalyzerPage() {
     <div className="flex flex-col gap-6">
       <div>
         <h1 className="text-2xl font-semibold">URL Analyzer</h1>
-        <p className="mt-1 text-muted-foreground">
+        <p className="text-muted-foreground mt-1">
           Paste a URL to see how it&apos;s structured. This checks structure only — it can&apos;t
           confirm a site&apos;s actual content is safe or malicious.
         </p>

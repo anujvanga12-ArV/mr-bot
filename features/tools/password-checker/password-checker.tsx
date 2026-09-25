@@ -33,7 +33,9 @@ function CheckItem({ label, met }: { label: string; met: boolean }) {
     <div
       className={cn(
         "rounded-md border px-3 py-2 text-center text-xs font-medium",
-        met ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400" : "border-border text-muted-foreground",
+        met
+          ? "border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400"
+          : "border-border text-muted-foreground",
       )}
     >
       {label}
@@ -47,9 +49,9 @@ export function PasswordChecker() {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="rounded-md border border-accent/40 bg-accent/10 p-3 text-sm">
-        Only test made-up example strings here — never a real password. Nothing typed here is
-        sent anywhere or stored; it&apos;s all evaluated in your browser.
+      <div className="border-accent/40 bg-accent/10 rounded-md border p-3 text-sm">
+        Only test made-up example strings here — never a real password. Nothing typed here is sent
+        anywhere or stored; it&apos;s all evaluated in your browser.
       </div>
 
       <input
@@ -59,11 +61,11 @@ export function PasswordChecker() {
         placeholder="Type an example password…"
         autoComplete="off"
         spellCheck={false}
-        className="h-10 rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:ring-2 focus-visible:ring-ring"
+        className="border-input bg-background focus-visible:ring-ring h-10 rounded-md border px-3 text-sm outline-none focus-visible:ring-2"
       />
 
       <div>
-        <div className="h-2 w-full overflow-hidden rounded-full bg-secondary">
+        <div className="bg-secondary h-2 w-full overflow-hidden rounded-full">
           <div
             className={cn("h-full rounded-full transition-all", STRENGTH_COLOR[result.strength])}
             style={{ width: value ? STRENGTH_WIDTH[result.strength] : "0%" }}
@@ -82,7 +84,10 @@ export function PasswordChecker() {
       {result.patterns.length > 0 ? (
         <div className="flex flex-col gap-2">
           {result.patterns.map((pattern) => (
-            <div key={pattern.id} className="rounded-md border border-destructive/40 bg-destructive/10 p-3 text-sm">
+            <div
+              key={pattern.id}
+              className="border-destructive/40 bg-destructive/10 rounded-md border p-3 text-sm"
+            >
               <p className="font-medium">{pattern.label}</p>
               <p className="text-muted-foreground">{pattern.detail}</p>
             </div>

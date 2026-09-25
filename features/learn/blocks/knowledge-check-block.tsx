@@ -20,7 +20,7 @@ export function KnowledgeCheckBlockView({ block }: { block: KnowledgeCheckBlock 
         <CardTitle className="text-base">Knowledge check</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col gap-4">
-        <p className="whitespace-pre-wrap text-sm font-medium">{block.prompt}</p>
+        <p className="text-sm font-medium whitespace-pre-wrap">{block.prompt}</p>
 
         <div className="flex flex-col gap-2">
           {block.options.map((option) => {
@@ -48,7 +48,7 @@ export function KnowledgeCheckBlockView({ block }: { block: KnowledgeCheckBlock 
                     <CheckCircle2 className="mt-0.5 size-4 shrink-0 text-emerald-600" />
                   ) : null}
                   {revealWrong ? (
-                    <XCircle className="mt-0.5 size-4 shrink-0 text-destructive" />
+                    <XCircle className="text-destructive mt-0.5 size-4 shrink-0" />
                   ) : null}
                 </span>
               </button>
@@ -93,7 +93,7 @@ export function KnowledgeCheckBlockView({ block }: { block: KnowledgeCheckBlock 
         )}
 
         {showHint && !submitted && block.hint ? (
-          <p className="text-sm italic text-muted-foreground">{block.hint}</p>
+          <p className="text-muted-foreground text-sm italic">{block.hint}</p>
         ) : null}
       </CardContent>
     </Card>

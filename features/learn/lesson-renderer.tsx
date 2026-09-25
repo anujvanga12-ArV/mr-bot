@@ -37,8 +37,6 @@ function renderBlock(block: ContentBlock, key: number) {
 
 export function LessonRenderer({ blocks }: { blocks: ContentBlock[] }) {
   return (
-    <div className="flex flex-col gap-6">
-      {blocks.map((block, i) => renderBlock(block, i))}
-    </div>
+    <div className="flex flex-col gap-6">{blocks.map((block, i) => renderBlock(block, i))}</div>
   );
 }
